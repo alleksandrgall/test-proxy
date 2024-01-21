@@ -1,0 +1,64 @@
+Cabal-version: 3.4
+
+
+Name:           test-proxy
+Version:        0.0.0.1
+
+Author:         Kovalev Dmitry
+Maintainer:     Kovalev Dmitry
+Homepage:       https://gl.getshop.tv/getshoptv/itv/traktir.git
+Bug-reports:    https://gl.getshop.tv/getshoptv/itv/traktir.git
+Copyright:      2024 Kovalev Dmitry
+Build-Type:     Simple
+
+
+Source-repository head
+  Type: git
+  Location: https://gl.getshop.tv/getshoptv/itv/traktir.git
+
+
+executable proxy-exe
+  main-is: Main.hs
+  hs-source-dirs:
+    proxy-exe
+  ghc-options: -O2 -threaded -rtsopts
+  build-depends:
+      test-proxy
+    , base
+
+Library
+  Autogen-Modules:
+    Paths_traktir
+  Exposed-Modules:
+    ITV.Traktir
+  Other-Modules:
+    Paths_traktir
+  HS-Source-Dirs:
+    ./traktir
+  GHC-Options:
+    -Wall
+    -fno-warn-type-defaults
+    -Wunused-packages
+
+  Build-depends:
+      base >= 4.7 && <5
+    , bytestring < 0.13
+    , ClickHaskell-client
+    , ClickHaskell-tables
+    , ClickHaskell-generics
+    , ClickHouse-db-types
+    , text < 2.2
+    , time < 1.13
+    , vector < 0.14
+    , uuid < 1.4
+    , wide-word < 0.2
+  Default-language: Haskell2010
+  Default-Extensions:
+    FlexibleContexts
+    FlexibleInstances
+    MultiParamTypeClasses
+    TypeApplications
+    TypeFamilies
+    TypeOperators
+    ScopedTypeVariables
+
