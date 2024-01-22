@@ -1,0 +1,8 @@
+.stack-work/
+*~
+TAGS
+stack.yaml.lock
+dist-newstyle/
+.vscode
+/result
+/.direnv

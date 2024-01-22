@@ -4,17 +4,17 @@ Cabal-version: 3.4
 Name:           test-proxy
 Version:        0.0.0.1
 
-Author:         Kovalev Dmitry
-Maintainer:     Kovalev Dmitry
-Homepage:       https://gl.getshop.tv/getshoptv/itv/traktir.git
-Bug-reports:    https://gl.getshop.tv/getshoptv/itv/traktir.git
-Copyright:      2024 Kovalev Dmitry
+Author:         Ivan Iablochkin
+Maintainer:     Ivan Iablochkin
+Homepage:       https://github.com/alleksandrgall/test-proxy
+Bug-reports:    https://github.com/alleksandrgall/test-proxy
+Copyright:      2024 Ivan Iablochkin
 Build-Type:     Simple
 
 
 Source-repository head
   Type: git
-  Location: https://gl.getshop.tv/getshoptv/itv/traktir.git
+  Location: https://github.com/alleksandrgall/test-proxy
 
 
 executable proxy-exe
@@ -28,13 +28,13 @@ executable proxy-exe
 
 Library
   Autogen-Modules:
-    Paths_traktir
+    Paths_test_proxy
   Exposed-Modules:
-    ITV.Traktir
+    DB
   Other-Modules:
-    Paths_traktir
+    Paths_test_proxy
   HS-Source-Dirs:
-    ./traktir
+    src
   GHC-Options:
     -Wall
     -fno-warn-type-defaults

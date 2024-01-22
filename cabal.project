@@ -1,0 +1,7 @@
+packages: .
+
+source-repository-package
+  type: git
+  location: https://github.com/KovalevDima/ClickHaskell.git
+  subdir: ClickHaskell-client ClickHaskell-tables ClickHaskell-generics ClickHouse-db-types
+
